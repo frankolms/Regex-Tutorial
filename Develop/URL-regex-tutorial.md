@@ -12,15 +12,9 @@ The regex that I will be discussing in this tutorial is one that will help you m
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
 - [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Metacharacters](#metacharacters)
 
 ## Regex Components
 
@@ -38,7 +32,7 @@ So if we look at the part of the regex that reads `(https?:\/\/)?`, this means t
 
 The star (`*`) quantifier is similar to the `?` quantifier in that anything that precedes it is optional. However, unlike the `?` quantifier, it does not only match it up to 1 time. The `*` quantifier will match whatever precedes it as many times as it appears in the string.
 
-If we look at the part of the regex that reads `([\/\w \.-]*)*`, we can see that this searches for any amount of forward slashes, letters either upper or lower case, periods, underscores, or hyphen. These are optional however. They do not have to be included in the search.
+If we look at the part of the regex that reads `([\/\w \.-]*)*`, we can see that this searches for any amount of forward slashes, word characters, periods, or underscores. These are optional however. They do not have to be included in the search.
 
 The plus (`+`) quantifier will match anything that precedes it at least 1 time. This means that whatever precedes it is mandatory in the search. It also does not only match it up to 1 time. It will match whatever precedes it as many times as it appears in the string.
 
@@ -56,18 +50,10 @@ Character classes are sets of characters that are placed within brackets (`[]`).
 
 The grouping constructs that we can see in our regex are parentheses (`()`). Things grouped in `()` are considered subgroups. The entire regular expression is considered "Group 0", and every subgroup in the regular expression from left to right is considered "Group 1", "Group 2", and so on. This essentially establishes the different components that make up a URL.
 
-### Bracket Expressions
+### Metacharacters
 
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
+There are some characters in regular expressions that represent specific search criteria. There are a few of these in the regex that we're discussing here. For example, in `[\da-z\.-]`, the `\d` metacharacter represents any character that is a digit. In `[\/\w \.-]`, the \w represents any word character. This includes A-Z, a-z, 0-9, and underscores.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
-
-```
-
-```
+This tutorial was written by Frank Olmsted. You can find his GitHub profile here:

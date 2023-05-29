@@ -38,7 +38,7 @@ So if we look at the part of the regex that reads `(https?:\/\/)?`, this means t
 
 The star (`*`) quantifier is similar to the `?` quantifier in that anything that precedes it is optional. However, unlike the `?` quantifier, it does not only match it up to 1 time. The `*` quantifier will match whatever precedes it as many times as it appears in the string.
 
-If we look at the part of the regex that reads `([\/\w \.-]*)*`, we can see that this searches for any amount of forward slashes, letters either upper or lower case, periods, or hyphen. These are optional however. They do not have to be included in the search.
+If we look at the part of the regex that reads `([\/\w \.-]*)*`, we can see that this searches for any amount of forward slashes, letters either upper or lower case, periods, underscores, or hyphen. These are optional however. They do not have to be included in the search.
 
 The plus (`+`) quantifier will match anything that precedes it at least 1 time. This means that whatever precedes it is mandatory in the search. It also does not only match it up to 1 time. It will match whatever precedes it as many times as it appears in the string.
 
@@ -50,11 +50,13 @@ If we look at the part of the regex that reads `([a-z\.]{2,6})`, this means that
 
 ### Character Classes
 
+Character classes are sets of characters that are placed within brackets (`[]`). The examples of this that we can see in this example regex are `[\da-z\.-]`, `[a-z\.]`, and `[\/\w \.-]`. These are usually followed by quantifiers and act to define parameters for what is being searched. If we look at the example `[a-z\.]`, this means that we are matching any letter from a-z or a period.
+
 ### Grouping and Capturing
 
-### Bracket Expressions
+The grouping constructs that we can see in our regex are parentheses (`()`). Things grouped in `()` are considered subgroups. The entire regular expression is considered "Group 0", and every subgroup in the regular expression from left to right is considered "Group 1", "Group 2", and so on. This essentially establishes the different components that make up a URL.
 
-### Greedy and Lazy Match
+### Bracket Expressions
 
 ### Boundaries
 

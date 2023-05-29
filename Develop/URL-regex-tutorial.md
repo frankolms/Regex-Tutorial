@@ -56,4 +56,4 @@ There are some characters in regular expressions that represent specific search 
 
 ## Author
 
-This tutorial was written by Frank Olmsted. You can find his GitHub profile here:
+This tutorial was written by Frank Olmsted. You can find his GitHub profile here: https://github.com/frankolms
